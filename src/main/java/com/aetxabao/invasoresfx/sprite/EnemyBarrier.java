@@ -1,14 +1,16 @@
 package com.aetxabao.invasoresfx.sprite;
 
+import com.aetxabao.invasoresfx.util.Rect;
 import javafx.scene.image.Image;
 
-public class EnemyBarrier extends AEnemy implements IHaveShield{
+public class EnemyBarrier extends EnemyShip implements IHaveShield{
     boolean hasBarrier;
-    public EnemyBarrier(Image img, int rows, int cols) {
-        super(img, rows, cols);
-        hasBarrier = true;
 
+    public EnemyBarrier(Rect gameRect, Image img, int N) {
+        super(gameRect, img, N);
+        hasBarrier = true;
     }
+
 
     @Override
     public void update() {

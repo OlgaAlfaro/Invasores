@@ -84,6 +84,8 @@ public class EnemySpawner {
             default:
                 e = new EnemyShip(gameRect, enemyImage, TICKSxFRAME);
                 break;
+            case E_BARRIER:
+                e = new EnemyBarrier(gameRect, enemyImage, TICKSxFRAME);
         }
         if (shot == E_SHOT_GUN){
             e.setWeapon(new Gun());
