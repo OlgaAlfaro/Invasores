@@ -54,12 +54,17 @@ public class EnemySpawner {
                 enemies = crearEnemigosNivelPaquito(gameRect);
                 break;
             case 3:
-            default:
                 enemies = crearEnemigosNivelPulpo(gameRect);
+                break;
+            case 4:
+            default:
+                enemies = crearEnemigosNivelEscudo(gameRect);
                 break;
         }
         return enemies;
     }
+
+
 
     /**
      * Crea un enemigo en una coordenada (i,j) con una velocidad (vx,vy)
@@ -134,6 +139,10 @@ public class EnemySpawner {
         enemies.add(createEnemyShip(E_DIAGONAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 3, 0, -vx, vy, E_SHOT_NOTHING));
         enemies.add(createEnemyShip(E_DIAGONAL, ENEMYSHIP_SPRITE_IMAGE_2, gameRect, 4, 0, vx, vy, E_SHOT_NOTHING));
         return enemies;
+    }
+
+    private static List<AEnemy> crearEnemigosNivelEscudo(Rect gameRect) {
+
     }
 
 }
