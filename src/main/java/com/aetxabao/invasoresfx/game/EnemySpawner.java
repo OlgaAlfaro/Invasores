@@ -141,8 +141,15 @@ public class EnemySpawner {
         return enemies;
     }
 
-    private static List<AEnemy> crearEnemigosNivelEscudo(Rect gameRect) {
-
+    public static List<AEnemy> crearEnemigosNivelEscudo(Rect gameRect) {
+        List<AEnemy> enemies = new ArrayList<>();
+        enemies.add(createEnemyShip(E_BARRIER, ENEMYSHIP_SPRITE_IMAGE_3, gameRect, 0, 0, vx, 0, E_SHOT_GUN));
+        enemies.add(createEnemyShip(E_BARRIER, ENEMYSHIP_SPRITE_IMAGE_3, gameRect, 7, 1, -vx, vy, E_SHOT_GUN));
+        enemies.add(createEnemyShip(E_BARRIER, ENEMYSHIP_SPRITE_IMAGE_3, gameRect, 2, 0, vx, 0, E_SHOT_GUN));
+        enemies.add(createEnemyShip(E_BARRIER, ENEMYSHIP_SPRITE_IMAGE_3, gameRect, 7, 0, -vx, vy, E_SHOT_GUN));
+        enemies.add(createEnemyShip(E_BARRIER, ENEMYSHIP_SPRITE_IMAGE_3, gameRect, 3, 4, vx, 0, E_SHOT_GUN));
+        enemies.add(createEnemyShip(E_BARRIER, ENEMYSHIP_SPRITE_IMAGE_3, gameRect, 4, 2, -vx, vy, E_SHOT_GUN));
+        return enemies;
     }
 
 }
