@@ -150,9 +150,15 @@ public class GameManager {
                     }else if (sprite instanceof IHaveShield){
                         temps.add(new SpriteTemp(temps, sprite.getRect().centerX(), sprite.getRect().centerY(),
                                                  EXPLOSION_9_SPRITE_IMAGE, 9));
-                        if (((EnemyBarrier) sprite).impact()){
-                            itSprite.remove();
+                        if(AShot.collides(sprite)){
+                            if(!((EnemyBarrier) sprite).getHasBarrier()){
+                                itSprite.remove();
+                            }
+                            ((EnemyBarrier) sprite).impact();
                         }
+
+
+
                     }else{
                         temps.add(new SpriteTemp(temps, sprite.getRect().centerX(), sprite.getRect().centerY(),
                                                  EXPLOSION_9_SPRITE_IMAGE, 9));
